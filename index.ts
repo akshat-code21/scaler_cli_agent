@@ -1,6 +1,6 @@
 import { Command } from "commander";
 import { client } from "./llm";
-import { SYSTEM_PROMPT_V2 } from "./prompt";
+import { SYSTEM_PROMPT_V2,SYSTEM_PROMPT_V3 } from "./prompt";
 import type { ChatMessages } from "@openrouter/sdk/models";
 import { parseAgentJsonSteps } from "./parse-agent-response";
 import {
@@ -238,7 +238,7 @@ program.action(async () => {
   const messages: ChatMessages[] = [
     {
       role: "system",
-      content: SYSTEM_PROMPT_V2,
+      content: SYSTEM_PROMPT_V3,
     },
     {
       role: "user",
