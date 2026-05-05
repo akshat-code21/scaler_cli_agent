@@ -242,7 +242,7 @@ program.action(async () => {
     },
     {
       role: "user",
-      content: `Clone this website: ${trimmedInput}\n\nSave all output files to this directory: ${outputDir}`,
+      content: `Clone the fully working landing page of this website: ${trimmedInput}\n\nSave all output files to this directory: ${outputDir}. The output should be fully working.`,
     },
   ];
 
