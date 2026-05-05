@@ -109,7 +109,7 @@ async function runAgentLoop(
 
         case "OUTPUT":
           console.log("\n[OUTPUT] " + parsedContent.content);
-          console.log("\n✅ Agent task complete.");
+          console.log("\nAgent task complete.");
           finished = true;
           break;
 
@@ -205,7 +205,7 @@ function resolvePath(filePath: string, outputDir: string): string {
 program.action(async () => {
   console.log(`
 ╭──────────────────────────────────────────────────────────────╮
-│                 🤖  Welcome to CLI Cloner!                   │
+│                   Welcome to CLI Cloner!                     │
 ├──────────────────────────────────────────────────────────────┤
 │  Clone any website into local HTML/CSS/JS files.             │
 │  Type a website URL to clone, or chat to refine the result.  │
@@ -228,7 +228,7 @@ program.action(async () => {
   let outputDir: string;
   try {
     outputDir = createOutputDir(trimmedInput);
-    console.log(`\n📁 Output directory: ${outputDir}\n`);
+    console.log(`\nOutput directory: ${outputDir}\n`);
   } catch (err) {
     console.error("Invalid URL. Please provide a full URL like https://example.com");
     rl.close();
@@ -251,7 +251,7 @@ program.action(async () => {
   while (true) {
     const followUp = await prompt(
       rl,
-      "\n💬 Ask for changes, or type 'exit' to quit: "
+      "\nAsk for changes, or type 'exit' to quit: "
     );
 
     if (!followUp || ["exit", "quit", "q"].includes(followUp.trim().toLowerCase())) {
