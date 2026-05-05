@@ -201,8 +201,8 @@ Do NOT crawl or follow links to other pages/routes.
   wget --page-requisites --span-hosts -H \
        --convert-links --adjust-extension \
        -e robots=off --no-check-certificate \
-       --timeout=30 --tries=2 \
-       -P OUTPUT_DIR URL
+       --timeout=30 --tries=2 -q \
+       -P OUTPUT_DIR URL 2>&1 | tail -5
 
 Key flags explained:
 - --page-requisites  : downloads only assets required to render THIS page (no link following)
